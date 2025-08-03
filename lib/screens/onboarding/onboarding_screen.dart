@@ -12,9 +12,12 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
   int _sectionIndex = 0;
 
+  List<Widget> _sections = [];
+
   @override
-  Widget build(BuildContext context) {
-    final List<Widget> sections = [
+  void initState() {
+    super.initState();
+    _sections = [
       OnboardingSection(
         mainImage: "assets/images/onboarding/onboarding-section-finance.png",
         title: "Take Control of Your Finances",
@@ -44,8 +47,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         onSkipPress: () => goToLogin(context),
       ),
     ];
+  }
 
-    final currentSection = sections[_sectionIndex];
+  @override
+  Widget build(BuildContext context) {
+    final currentSection = _sections[_sectionIndex];
 
     return Scaffold(body: currentSection);
   }
