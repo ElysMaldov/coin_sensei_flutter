@@ -1,4 +1,5 @@
 import 'package:coin_sensei_flutter/router/router.dart';
+import 'package:coin_sensei_flutter/themes/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,6 +14,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: router,
       debugShowCheckedModeBanner: false,
+      theme: theme,
     );
   }
 }
