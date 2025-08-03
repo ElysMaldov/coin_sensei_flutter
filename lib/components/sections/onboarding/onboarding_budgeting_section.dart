@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class OnboardingBudgetingScreen extends StatelessWidget {
-  const OnboardingBudgetingScreen({super.key});
+class OnboardingBudgetingSection extends StatelessWidget {
+  const OnboardingBudgetingSection({super.key});
 
   @override
   Widget build(BuildContext context) {
